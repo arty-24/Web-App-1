@@ -1,0 +1,82 @@
+### CREATE five documents.
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "location": "West Palm Beach, Florida",
+    "date": "2023-06-07",
+    "daysSpent": 6
+}
+
+
+### CREATE 2
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "location": "Pensacola, Florida",
+    "date": "2022-01-27",
+    "daysSpent": 4
+}
+
+### CREATE 3
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "location": "Del Ray Beach, Florida",
+    "date": "2021-07-21",
+    "daysSpent": 6
+}
+
+### CREATE 4
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "location": "New York City, New York",
+    "date": "2015-06-23",
+    "daysSpent": 7
+}
+
+### CREATE 5
+POST http://localhost:3000/places HTTP/1.1
+content-type: application/json
+
+{
+    "location": "San Salvador, El Salvador",
+    "date": "2014-11-18",
+    "daysSpent": 3
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/places HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/places/64d3b1398146c0d744a4b95b HTTP/1.1
+
+
+### UPDATE one document's date, by ID.
+### Replace the ID in the following request with one that exists
+### and update the date:
+PUT http://localhost:3000/places/64d3afbb0816f78a7cedf90a HTTP/1.1
+content-type: application/json
+
+{
+    "location": "West Palm Beach, Florida",
+    "date": "2023-06-07",
+    "daysSpent": 8
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/places/64d3afbb0816f78a7cedf90a HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/places HTTP/1.1
+
